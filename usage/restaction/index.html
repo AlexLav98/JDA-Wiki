@@ -1,0 +1,1030 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Wiki about JDA">
+      
+      
+      
+        <meta name="author" content="Andre_601">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>RestAction - JDA-Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#restactions" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="JDA-Wiki" aria-label="JDA-Wiki" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              JDA-Wiki
+            </span>
+            <span class="md-header-nav__topic">
+              
+                RestAction
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/Andre601/JDA-Wiki/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Andre601/JDA-Wiki
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Welcome
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../setup/" class="md-tabs__link">
+          Setup
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../" class="md-tabs__link md-tabs__link--active">
+          Use
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="JDA-Wiki" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    JDA-Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/Andre601/JDA-Wiki/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Andre601/JDA-Wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Setup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../setup/" title="Setup" class="md-nav__link">
+      Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../setup/intellij/" title="IntelliJ" class="md-nav__link">
+      IntelliJ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../setup/eclipse/" title="Eclipse" class="md-nav__link">
+      Eclipse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../setup/netbeans/" title="Netbeans" class="md-nav__link">
+      Netbeans
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Use
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Use
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        RestAction
+      </label>
+    
+    <a href="./" title="RestAction" class="md-nav__link md-nav__link--active">
+      RestAction
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#auditlog-reasons" class="md-nav__link">
+    AuditLog Reasons
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asynchronous" class="md-nav__link">
+    Asynchronous
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#queue" class="md-nav__link">
+    queue()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queueconsumer" class="md-nav__link">
+    queue(Consumer)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-sending-a-dm" class="md-nav__link">
+    Example: Sending a DM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queueconsumer-consumer" class="md-nav__link">
+    queue(Consumer, Consumer)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocking" class="md-nav__link">
+    Blocking
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete" class="md-nav__link">
+    complete()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cancelable" class="md-nav__link">
+    Cancelable
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submit" class="md-nav__link">
+    submit()
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-change-channel-settings" class="md-nav__link">
+    Example: Change channel settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning" class="md-nav__link">
+    Planning
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#queueafterlong-timeunit" class="md-nav__link">
+    queueAfter(long, TimeUnit)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queueafterlong-timeunit-consumer" class="md-nav__link">
+    queueAfter(long, TimeUnit, Consumer)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queueafterlong-timeunit-consumer-consumer" class="md-nav__link">
+    queueAfter(long, TimeUnit, Consumer, Consumer)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#completeafterlong-timeunit" class="md-nav__link">
+    completeAfter(long, TimeUnit)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitafterlong-timeunit" class="md-nav__link">
+    submitAfter(long, TimeUnit)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gatewayintents/" title="GatewayIntents" class="md-nav__link">
+      GatewayIntents
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#auditlog-reasons" class="md-nav__link">
+    AuditLog Reasons
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asynchronous" class="md-nav__link">
+    Asynchronous
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#queue" class="md-nav__link">
+    queue()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queueconsumer" class="md-nav__link">
+    queue(Consumer)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-sending-a-dm" class="md-nav__link">
+    Example: Sending a DM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queueconsumer-consumer" class="md-nav__link">
+    queue(Consumer, Consumer)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocking" class="md-nav__link">
+    Blocking
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete" class="md-nav__link">
+    complete()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cancelable" class="md-nav__link">
+    Cancelable
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submit" class="md-nav__link">
+    submit()
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-change-channel-settings" class="md-nav__link">
+    Example: Change channel settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning" class="md-nav__link">
+    Planning
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#queueafterlong-timeunit" class="md-nav__link">
+    queueAfter(long, TimeUnit)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queueafterlong-timeunit-consumer" class="md-nav__link">
+    queueAfter(long, TimeUnit, Consumer)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queueafterlong-timeunit-consumer-consumer" class="md-nav__link">
+    queueAfter(long, TimeUnit, Consumer, Consumer)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#completeafterlong-timeunit" class="md-nav__link">
+    completeAfter(long, TimeUnit)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitafterlong-timeunit" class="md-nav__link">
+    submitAfter(long, TimeUnit)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Andre601/JDA-Wiki/edit/master/docs/usage/restaction.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="restactions">RestActions<a class="headerlink" href="#restactions" title="Permanent link">&para;</a></h1>
+<p>RestActions where introduced in JDA 3.0 and are since then a key part of the project.<br />
+The RestAction can be seen as a terminal between the JDA user and the Discord REST API, handling the requests about what your bot wants to do and executing it.<br />
+It allows you to specify <em>how</em> JDA should deal with their requests.</p>
+<p>That said, will you need to actually "tell" the RestAction to <em>do something</em>. It is recommendet to always check if something in JDA is returning a RestAction.<br />
+If it does, then you have to execute it using one of the below listed operations:</p>
+<ul>
+<li><a href="#asynchronous">queue(), queue(Consumer) or queue(Consumer, Consumer)</a><br />
+These operations are run asynchronous, meaning they won't execute in the same Thread.<br />
+This means you can't use procedural logic when using <code>queue()</code>, unless you use the callback Consumer (Click the link for more info).</li>
+<li><a href="#blocking">complete()</a><br />
+Calling this operation will <strong>block</strong> the current Thread until the request has finished and returns the response type.</li>
+<li><a href="#cancelable">submit()</a><br />
+Provides request future to cancel tasks later and avoid callback hell.</li>
+<li><a href="#planning">xAfter(...)</a><br />
+<code>queueAfter()</code>, <code>completeAfter()</code> and <code>submitAfter()</code> provide similar functionalities as their normal counterparts, but with the ability to delay the execution.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>We recommend using <code>queue()</code> or <code>submit()</code> when possible as blocking the current Thread could cause unwanted side-effects.</p>
+</div>
+<p>Since JDA 4.1.1 can you use additional methods to prevent a so called "Callback hell" with <code>queue()</code>.
+- <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/requests/RestAction.html#map%28java.util.function.Function%29"><code>map</code></a> Convert the result of the <code>RestAction</code> to a different value.
+- <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/requests/RestAction.html#flatMap%28java.util.function.Function%29"><code>flatMap</code></a> Chain another <code>RestAction</code> on the result.
+- <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/requests/RestAction.html#delay%28java.time.Duration%29"><code>delay</code></a> Delay the element of the previous step.</p>
+<h2 id="auditlog-reasons">AuditLog Reasons<a class="headerlink" href="#auditlog-reasons" title="Permanent link">&para;</a></h2>
+<p>Some operations return a special <code>RestAction</code> implementation called <code>AuditableRestAction</code>.<br />
+This extension allows to set a reason field for that action.</p>
+<p>These reasons are only available for accounts of <code>AccountType.BOT</code> but will silently be ignored for any non-bot accounts.<br />
+However, any account type can use reasons on kicks and bans with the special overloads provided that allows setting a reason.</p>
+<p><strong>Example</strong>:<br />
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ModUtil</span><span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">deleteMessage</span><span class="p">(</span><span class="n">Message</span> <span class="n">message</span><span class="p">,</span> <span class="n">String</span> <span class="n">reason</span><span class="p">){</span>
+        <span class="n">message</span><span class="p">.</span><span class="na">delete</span><span class="p">().</span><span class="na">reason</span><span class="p">(</span><span class="n">reason</span><span class="p">).</span><span class="na">queue</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">banMember</span><span class="p">(</span><span class="n">Guild</span> <span class="n">guild</span><span class="p">,</span> <span class="n">User</span> <span class="n">user</span><span class="p">,</span> <span class="n">String</span> <span class="n">reason</span><span class="p">){</span>
+        <span class="n">guild</span><span class="p">.</span><span class="na">ban</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">reason</span><span class="p">).</span><span class="na">queue</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="asynchronous">Asynchronous<a class="headerlink" href="#asynchronous" title="Permanent link">&para;</a></h2>
+<h3 id="queue"><code>queue()</code><a class="headerlink" href="#queue" title="Permanent link">&para;</a></h3>
+<p>The most common way for executing a RestAction is to simply call <code>queue()</code>:<br />
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">sendMessage</span><span class="p">(</span><span class="n">MessageChannel</span> <span class="n">channel</span><span class="p">,</span> <span class="n">String</span> <span class="n">message</span><span class="p">){</span>
+    <span class="n">channel</span><span class="p">.</span><span class="na">sendMessage</span><span class="p">(</span><span class="n">message</span><span class="p">).</span><span class="na">queue</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Note that this RestAction might be finished before other RestActions which used queue.<br />
+For example: Your bot opens a DM with a user and then sends a message in said DM. Due to the nature of async methods can it happen that sending the message is finished first, causing an error, when the channel isn't available.</p>
+<p>You can use one of the below mentioned variants of queue for fixing this, or use the <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/requests/RestAction.html#flatMap%28java.util.function.Function%29"><code>flatMap</code></a> option added in JDA 4.1.1!</p>
+<h3 id="queueconsumer"><code>queue(Consumer)</code><a class="headerlink" href="#queueconsumer" title="Permanent link">&para;</a></h3>
+<p><code>queue(Consumer&lt;T&gt;)</code> allows you to execute a RestAction using queue and then performing additional actions once this has finished.</p>
+<h4 id="example-sending-a-dm">Example: Sending a DM<a class="headerlink" href="#example-sending-a-dm" title="Permanent link">&para;</a></h4>
+<p>You may want to send a DM from your bot to a user to f.e. send the command help.<br />
+Using queue is the recommendet way here, but can cause unwanted side effects as sending the DM could happen before the DM was even opened.</p>
+<p>This is where the <code>success callback</code> (Or <code>Success Consumer</code>) comes into play!<br />
+Let's first make a little example with our DM thing:<br />
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">sendDM</span><span class="p">(</span><span class="n">User</span> <span class="n">user</span><span class="p">,</span> <span class="n">String</span> <span class="n">message</span><span class="p">){</span>
+    <span class="n">user</span><span class="p">.</span><span class="na">openPrivateChannel</span><span class="p">().</span><span class="na">queue</span><span class="p">(</span><span class="k">new</span> <span class="n">Consumer</span><span class="o">&lt;</span><span class="n">PrivateChannel</span><span class="o">&gt;</span><span class="p">(){</span> <span class="c1">// queue returns a PrivateChannel object</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">accept</span><span class="p">(</span><span class="n">PrivateChannel</span> <span class="n">channel</span><span class="p">){</span>
+            <span class="n">channel</span><span class="p">.</span><span class="na">sendMessage</span><span class="p">(</span><span class="n">message</span><span class="p">).</span><span class="na">queue</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>"But that looks really ugly!" will you now say, right?<br />
+Don't worry, there is a solution for this. Since JDA requires you to use Java 8, can you use something quite useful: Lambda expressions!<br />
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">sendDM</span><span class="p">(</span><span class="n">User</span> <span class="n">user</span><span class="p">,</span> <span class="n">String</span> <span class="n">message</span><span class="p">){</span>
+    <span class="c1">// We call the callback &quot;channel&quot; here and use it as a reference.</span>
+    <span class="n">Consumer</span><span class="o">&lt;</span><span class="n">PrivateChannel</span><span class="o">&gt;</span> <span class="n">callback</span> <span class="o">=</span> <span class="p">(</span><span class="n">channel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">channel</span><span class="p">.</span><span class="na">sendMessage</span><span class="p">(</span><span class="n">message</span><span class="p">).</span><span class="na">queue</span><span class="p">();</span>
+    <span class="n">user</span><span class="p">.</span><span class="na">openPrivateChannel</span><span class="p">().</span><span class="na">queue</span><span class="p">(</span><span class="n">callback</span><span class="p">);</span> <span class="c1">// callback will execute the above Consumer.</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>But wait! You can even simplify it more:<br />
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">sendDM</span><span class="p">(</span><span class="n">User</span> <span class="n">user</span><span class="p">,</span> <span class="n">String</span> <span class="n">message</span><span class="p">){</span>
+    <span class="c1">// We set &quot;channel&quot; as reference, which is an instance of Consumer&lt;PrivateChannel&gt;</span>
+    <span class="n">user</span><span class="p">.</span><span class="na">openPrivateChannel</span><span class="p">().</span><span class="na">queue</span><span class="p">((</span><span class="n">channel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">channel</span><span class="p">.</span><span class="na">sendMessage</span><span class="p">(</span><span class="n">message</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="queueconsumer-consumer"><code>queue(Consumer, Consumer)</code><a class="headerlink" href="#queueconsumer-consumer" title="Permanent link">&para;</a></h3>
+<p>"But what if the user doesn't allow DMs?" For that does <code>queue(Consumer&lt;T&gt;, Consumer&lt;Throwable&gt;)</code> exist!<br />
+The first Consumer is used on a successfull action, while the second one is used on a failed one.<br />
+Note, that in this case, you have to use it for the queue of sending the message, as opening a Private channel rarely fails.</p>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>With JDA 4.1.1 where <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/requests/RestAction.html#map%28java.util.function.Function%29"><code>map</code>'s</a> and <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/requests/RestAction.html#flatMap%28java.util.function.Function%29"><code>flatMap</code>'s</a> added, which improve handling cases like the above example with sending a DM a lot.</p>
+</div>
+<h2 id="blocking">Blocking<a class="headerlink" href="#blocking" title="Permanent link">&para;</a></h2>
+<h3 id="complete"><code>complete()</code><a class="headerlink" href="#complete" title="Permanent link">&para;</a></h3>
+<p>The <code>complete()</code> method is simply for convenience as it does nothing more than calling <a href="#queue"><code>queue()</code></a> and blocking the Thread.<br />
+It is highly recommendet to use <code>queue()</code> or <code>submit()</code> if you don't use return values or need to wait for an action to finish before others.</p>
+<h2 id="cancelable">Cancelable<a class="headerlink" href="#cancelable" title="Permanent link">&para;</a></h2>
+<h3 id="submit"><code>submit()</code><a class="headerlink" href="#submit" title="Permanent link">&para;</a></h3>
+<p>Sometimes do you want to cancel a request before it gets executed, to prevent errors.<br />
+This can be quite challenging when using <a href="#queue"><code>queue()</code></a> or <a href="#complete"><code>complete()</code></a>.<br />
+In <code>submit()</code> does JDA provide a <code>CompletableFuture</code> (aka promise) which allows you to cancel it when not needed.</p>
+<p>If you don't need a <code>CompletableFuture</code> you may want to use <code>queue()</code> instead!</p>
+<h4 id="example-change-channel-settings">Example: Change channel settings<a class="headerlink" href="#example-change-channel-settings" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="c1">// With just using queue()</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTestChannel</span><span class="p">(</span><span class="n">TextChannel</span> <span class="n">channel</span><span class="p">){</span>
+    <span class="n">channel</span><span class="p">.</span><span class="na">getManager</span><span class="p">().</span><span class="na">setName</span><span class="p">(</span><span class="s">&quot;test-channel&quot;</span><span class="p">).</span><span class="na">queue</span><span class="p">((</span><span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span>
+        <span class="n">channel</span><span class="p">.</span><span class="na">sendMessage</span><span class="p">(</span><span class="s">&quot;Update channel&quot;</span><span class="p">).</span><span class="na">queue</span><span class="p">((</span><span class="n">m</span><span class="p">)</span> <span class="o">-&gt;</span>
+            <span class="n">m</span><span class="p">.</span><span class="na">delete</span><span class="p">().</span><span class="na">queueAfter</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="n">TimeUnit</span><span class="p">.</span><span class="na">SECONDS</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-&gt;</span>
+                <span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Deleted response in &quot;</span> <span class="o">+</span> <span class="n">channel</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Using submit() instead</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTestChannel</span><span class="p">(</span><span class="n">TextChannel</span> <span class="n">channel</span><span class="p">){</span>
+    <span class="n">channel</span><span class="p">.</span><span class="na">getManager</span><span class="p">().</span><span class="na">setName</span><span class="p">(</span><span class="s">&quot;test-channel&quot;</span><span class="p">).</span><span class="na">submit</span><span class="p">()</span>
+           <span class="p">.</span><span class="na">thenCompose</span><span class="p">((</span><span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">channel</span><span class="p">.</span><span class="na">sendMessage</span><span class="p">(</span><span class="s">&quot;Update Channel&quot;</span><span class="p">).</span><span class="na">submit</span><span class="p">())</span>
+           <span class="p">.</span><span class="na">thenCompose</span><span class="p">((</span><span class="n">m</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">m</span><span class="p">.</span><span class="na">delete</span><span class="p">().</span><span class="na">submitAfter</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="n">TimeUnit</span><span class="p">.</span><span class="na">SECONDS</span><span class="p">))</span>
+           <span class="p">.</span><span class="na">thenCompose</span><span class="p">((</span><span class="n">t</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Deleted response in &quot;</span> <span class="o">+</span>  <span class="n">channel</span><span class="p">.</span><span class="na">getName</span><span class="p">()))</span>
+           <span class="p">.</span><span class="na">whenComplete</span><span class="p">((</span><span class="n">s</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+               <span class="c1">// This is called on termination (success/failure)</span>
+               <span class="c1">// If the result is successfull is error null</span>
+               <span class="k">if</span><span class="p">(</span><span class="n">error</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="n">error</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+           <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>With JDA 4.1.1 can you now use <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/requests/RestAction.html#flatMap%28java.util.function.Function%29"><code>RestAction#flatMap</code></a> to achieve similar results with methods like <code>queue()</code></p>
+</div>
+<h2 id="planning">Planning<a class="headerlink" href="#planning" title="Permanent link">&para;</a></h2>
+<p>The <code>xAfter()</code> are also known as <strong>Planned Execution</strong> as they use a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html">ScheduledExecutorService</a> to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html#schedule-java.lang.Runnable-long-java.util.concurrent.TimeUnit-">schedule</a> calls to either <a href="#complete"><code>complete()</code></a> or <a href="#queue"><code>queue()</code></a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>With the exception of <code>completeAfter()</code> can you provide a own ScheduledExecutorService as the last argument to any of the methods.</p>
+</div>
+<h3 id="queueafterlong-timeunit"><code>queueAfter(long, TimeUnit)</code><a class="headerlink" href="#queueafterlong-timeunit" title="Permanent link">&para;</a></h3>
+<p>Sends a delayed <a href="#queue"><code>queue()</code></a> action.</p>
+<h3 id="queueafterlong-timeunit-consumer"><code>queueAfter(long, TimeUnit, Consumer)</code><a class="headerlink" href="#queueafterlong-timeunit-consumer" title="Permanent link">&para;</a></h3>
+<p>Sends a delayed <a href="#queueconsumer"><code>queue(Consumer&lt;T&gt;)</code></a> action.</p>
+<h3 id="queueafterlong-timeunit-consumer-consumer"><code>queueAfter(long, TimeUnit, Consumer, Consumer)</code><a class="headerlink" href="#queueafterlong-timeunit-consumer-consumer" title="Permanent link">&para;</a></h3>
+<p>Sends a delayed <a href="#queueconsumer-consumer"><code>queue(Consumer&lt;T&gt;, Consumer&lt;Throwable&gt;</code></a> action.</p>
+<hr />
+<h3 id="completeafterlong-timeunit"><code>completeAfter(long, TimeUnit)</code><a class="headerlink" href="#completeafterlong-timeunit" title="Permanent link">&para;</a></h3>
+<p>Sends a delayed <a href="#complete"><code>complete()</code></a> action.<br />
+Note that this is the only <code>xAfter()</code> method, that doesn't provide an option to use a own ScheduledExecutorService.</p>
+<hr />
+<h3 id="submitafterlong-timeunit"><code>submitAfter(long, TimeUnit)</code><a class="headerlink" href="#submitafterlong-timeunit" title="Permanent link">&para;</a></h3>
+<p>Creates a <code>DelayedCompletableFuture&lt;T&gt;</code> which will hold the response type as its generic value.<br />
+This means that using <code>get()</code> on the returned Future will cause the curren thread to block and await the execution of the RestAction and receive the response type.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../" title="Getting started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting started
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../gatewayintents/" title="GatewayIntents" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                GatewayIntents
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/DV8FromTheWorld/JDA" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

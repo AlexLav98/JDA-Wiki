@@ -17,7 +17,7 @@ The live-version of **this** wiki can be found [here][site].
 Credit goes to the following people:
 - [**Austin Keener**][Austin] (aka DV8FromTheWorld), [**Michael Ritter**][Michael] (aka Kantenkugel) and [**Florian Spieß**][Florian] (aka MinnDevelopment)  
 Contributors towards JDA and the official Wiki for it.
-- **MkDocs**  
+- [**MkDocs**][MkDocs]  
 Provides the software used to generate the wiki-pages.
 - [**Martin Donath**][Martin] (aka squidfunk)  
 Creator of the "Material" Theme used in this wiki.

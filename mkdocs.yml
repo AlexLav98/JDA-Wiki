@@ -1,0 +1,42 @@
+site_name: JDA-Wiki
+site_description: 'Wiki about JDA'
+site_author: 'Andre_601'
+
+docs_dir: docs/
+
+repo_name: 'Andre601/JDA-Wiki'
+repo_url: 'https://github.com/Andre601/JDA-Wiki'
+
+nav:
+  - Welcome: index.md
+  - Setup:
+    - Setup: setup/index.md
+    - IntelliJ: setup/intellij.md
+    - Eclipse: setup/eclipse.md
+    - Netbeans: setup/netbeans.md
+  - Use:
+    - Getting started: usage/index.md
+    - RestAction: usage/restaction.md
+    - GatewayIntents: usage/gatewayintents.md
+
+theme:
+  name: 'material'
+  palette:
+    primary: 'deep purple'
+    accent: 'deep purple'
+  feature:
+    tabs: true
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/DV8FromTheWorld/JDA'
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details

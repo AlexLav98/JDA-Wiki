@@ -387,9 +387,59 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Getting started
+      </label>
+    
     <a href="./" title="Getting started" class="md-nav__link md-nav__link--active">
       Getting started
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-discord-bot" class="md-nav__link">
+    Creating a Discord Bot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-your-bot-to-a-discord-server" class="md-nav__link">
+    Adding your Bot to a Discord server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-discord-with-the-bot-account" class="md-nav__link">
+    Connecting to Discord with the Bot account.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-a-simple-ping-command" class="md-nav__link">
+    Setup a simple ping command
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -440,6 +490,43 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-discord-bot" class="md-nav__link">
+    Creating a Discord Bot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-your-bot-to-a-discord-server" class="md-nav__link">
+    Adding your Bot to a Discord server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-discord-with-the-bot-account" class="md-nav__link">
+    Connecting to Discord with the Bot account.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-a-simple-ping-command" class="md-nav__link">
+    Setup a simple ping command
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -454,6 +541,129 @@
                 
                 
                 <h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
+<p>Before you continue, make sure you've <a href="../setup/">setup a project</a> in the IDE of your choice.</p>
+<h2 id="creating-a-discord-bot">Creating a Discord Bot<a class="headerlink" href="#creating-a-discord-bot" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Go to https://discordapp.com/developers/applications/ and login if you didn't already.</li>
+<li>Click on "New Application" on the top right.</li>
+<li>Give your application a name. This will be used as the bot's initial name (Can be altered later).</li>
+<li>Click on "Create".</li>
+<li>Click on the "Bot" tab at the left side.</li>
+<li>Click the button "Add Bot" and confirm your choice by clicking on "Yes, Do it!"<ol>
+<li>Your bot has been created now</li>
+<li>You can change the name, add/edit the avatar and set the bot to public/private.</li>
+</ol>
+</li>
+<li>Your bot is now ready to be added to Discords.</li>
+</ol>
+<h2 id="adding-your-bot-to-a-discord-server">Adding your Bot to a Discord server<a class="headerlink" href="#adding-your-bot-to-a-discord-server" title="Permanent link">&para;</a></h2>
+<ol>
+<li>On your application, click on the "OAuth2" tab on the left side.</li>
+<li>Under the "Scopes" section, check "Bot" (Center column).</li>
+<li>Select the permissions that you want to give to your bot.<br />
+It's highly recommendet, to <strong>not</strong> give Administrator!</li>
+<li>Click on "Copy" in the text box, to copy the URL into your clipboard.</li>
+<li>Open the copied URL in a new browser tab.</li>
+<li>Select the server where you want to add your Bot and click "Next".<br />
+This requires you to at least have "Manage Server" permissions.<ol>
+<li>If you set permissions does now a new section open, where I can (un)check permissions.</li>
+</ol>
+</li>
+<li>Click on "Authorize" and solve the captcha to confirm that you're not a bot.</li>
+<li>Congratulations! Your bot should now be on the selected Discord.</li>
+</ol>
+<h2 id="connecting-to-discord-with-the-bot-account">Connecting to Discord with the Bot account.<a class="headerlink" href="#connecting-to-discord-with-the-bot-account" title="Permanent link">&para;</a></h2>
+<ol>
+<li>On your application, click on the "Bot" tab on the left side.</li>
+<li>Under the "Token" section, click on the "Copy" button, to copy the token into your clipboard.<br />
+Do NOT click on "Regenerate" as this will recreate your token and invalidate the old one.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p><strong>Never</strong> show the bot token to other people as they can take over control of your bot with it!</p>
+</div>
+<ol>
+<li>Setup a JDA project as described <a href="../setup/">here</a>.</li>
+<li>Create a JDA instance using the <code>JDABuilder</code> and your bot token:<br />
+<div class="codehilite"><pre><span></span><code><span class="c1">// JDA can throw InterruptedException or LoginException on start.</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">LoginException</span><span class="p">,</span> <span class="n">InterruptedException</span><span class="p">{</span>
+    <span class="cm">/*</span>
+<span class="cm">     * It is recommendet to have the token setup in a separate</span>
+<span class="cm">     * file like a config file, to prevent accidental sharing</span>
+<span class="cm">     * on platforms like GitHub.</span>
+<span class="cm">     *</span>
+<span class="cm">     * Your Bot token WILL be invalidated automatically, if you</span>
+<span class="cm">     * share it on GitHub!</span>
+<span class="cm">     */</span>
+    <span class="n">JDA</span> <span class="n">jda</span> <span class="o">=</span> <span class="n">JDABuilder</span>
+        <span class="p">.</span><span class="na">createDefault</span><span class="p">(</span><span class="s">&quot;YourTokenHere&quot;</span><span class="p">)</span>
+        <span class="p">.</span><span class="na">build</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ol>
+<h2 id="setup-a-simple-ping-command">Setup a simple ping command<a class="headerlink" href="#setup-a-simple-ping-command" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Setup a <a href="#connecting-to-discord-with-the-bot-account">JDA instance</a>.</li>
+<li>Create a separate class, which <code>extends ListenerAdabter</code>. Example:<br />
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PingCmd</span> <span class="kd">extends</span> <span class="n">ListenerAdabter</span><span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div></li>
+<li>Add the <code>MessageReceivedEvent</code> to the class (Make sure the spelling is right!) and fill it like this:<br />
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PingCmd</span> <span class="kd">extends</span> <span class="n">ListenerAdabter</span><span class="p">{</span>
+
+    <span class="c1">// names of the voids are always &quot;onX(XEvent)&quot;</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onMessageReceived</span><span class="p">(</span><span class="n">MessageReceivedEvent</span> <span class="n">event</span><span class="p">){</span>
+        <span class="cm">/*</span>
+<span class="cm">         * We ignore bots, which includes our own.</span>
+<span class="cm">         *</span>
+<span class="cm">         * getAuthor() gives us the User (author) of the message</span>
+<span class="cm">         * This is only available for message-based events.</span>
+<span class="cm">         */</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="na">getAuthor</span><span class="p">().</span><span class="na">isBot</span><span class="p">())</span>
+            <span class="k">return</span><span class="p">;</span>
+
+        <span class="n">Message</span> <span class="n">message</span> <span class="o">=</span> <span class="n">event</span><span class="p">.</span><span class="na">getMessage</span><span class="p">();</span> <span class="c1">// Getting the message send in this event.</span>
+
+        <span class="cm">/*</span>
+<span class="cm">         * getContentRaw() gives us the raw message, without any formatting.</span>
+<span class="cm">         * This means that f.e. mentiones could look like this: &lt;@123456789012345678&gt;</span>
+<span class="cm">         *</span>
+<span class="cm">         * Other options are getContentDisplay(), which would give the message as</span>
+<span class="cm">         * it would look like on Discord (e.g. Mention shows as @User)</span>
+<span class="cm">         * or getContentStripped() which is like getContentDisplay() but removes</span>
+<span class="cm">         * any markdown formatting.</span>
+<span class="cm">         */</span>
+        <span class="n">String</span> <span class="n">content</span> <span class="o">=</span> <span class="n">message</span><span class="p">.</span><span class="na">getContentRaw</span><span class="p">();</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">content</span><span class="p">.</span><span class="na">equalsIgnoreCase</span><span class="p">(</span><span class="s">&quot;!ping&quot;</span><span class="p">)){</span>
+            <span class="n">MessageChannel</span> <span class="n">channel</span> <span class="o">=</span> <span class="n">event</span><span class="p">.</span><span class="na">getChannel</span><span class="p">();</span>
+            <span class="n">channel</span><span class="p">.</span><span class="na">sendMessage</span><span class="p">(</span><span class="s">&quot;Pong!&quot;</span><span class="p">).</span><span class="na">queue</span><span class="p">();</span> <span class="c1">// Remember to use .queue() when you use RestActions!</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>Register your listeners either through the JDABuilder or JDA directly:<br />
+<div class="codehilite"><pre><span></span><code><span class="c1">// Option 1: Through JDABuilder</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">LoginException</span><span class="p">,</span> <span class="n">InterruptedException</span><span class="p">{</span>
+    <span class="n">JDA</span> <span class="n">jda</span> <span class="o">=</span> <span class="n">JDABuilder</span>
+        <span class="p">.</span><span class="na">createDefault</span><span class="p">(</span><span class="s">&quot;YourTokenHere&quot;</span><span class="p">)</span>
+        <span class="p">.</span><span class="na">addEventListeners</span><span class="p">(</span><span class="k">new</span> <span class="n">PingCmd</span><span class="p">())</span>
+        <span class="p">.</span><span class="na">build</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// Option 2: directly through JDA</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">LoginException</span><span class="p">,</span> <span class="n">InterruptedException</span><span class="p">{</span>
+    <span class="n">JDA</span> <span class="n">jda</span> <span class="o">=</span> <span class="n">JDABuilder</span>
+        <span class="p">.</span><span class="na">createDefault</span><span class="p">(</span><span class="s">&quot;YourTokenHere&quot;</span><span class="p">)</span>
+        <span class="p">.</span><span class="na">build</span><span class="p">()</span>
+        <span class="p">.</span><span class="na">awaitReady</span><span class="p">();</span> <span class="c1">// Blocks thread until JDA is marked &quot;ready&quot;</span>
+
+    <span class="n">jda</span><span class="p">.</span><span class="na">addEventListeners</span><span class="p">(</span><span class="k">new</span> <span class="n">PingCmd</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ol>
                 
                   
                 

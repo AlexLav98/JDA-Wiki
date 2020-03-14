@@ -55,7 +55,7 @@ compileJava.options.encoding = 'UTF-8'
 11. Setup your Bot. Example:  
 	![step 11](/assets/img/intellij/new_step_11.png)
 12. To build your jar, use the `gradlew shadowJar` command. You can also run your project with the `run` gradle task.
-13. Continue to Getting started.
+13. Continue with [Getting started](../usage/index.md)
 
 ## Older IntelliJ version
 This is for versions before v2019

@@ -61,6 +61,7 @@ compileJava.options.encoding = 'UTF-8'
 10. Save everything, right-click your project and select `Gradle -> Refresh All`
     1. All required dependencies should now be downloaded.
 11. To build a jar, run `gradlew shadowJar` in a terminal at the root folder of your project.
+12. Continue with [Getting started](../usage/index.md)
 
 ## Setup Maven
 
@@ -137,6 +138,7 @@ compileJava.options.encoding = 'UTF-8'
   </plugins>
 </build>
 ```
+6. Continue with [Getting started](../usage/index.md)
 
 ## Setup from jar
 1. Downloaded the latest release (Bintray) of JDA (with dependencies):
@@ -157,4 +159,4 @@ compileJava.options.encoding = 'UTF-8'
 9. Click on "Javadoc Location", followed by "Edit..." and then mark "Javadoc in archive" before clicking on "Browse".  
 ![step 9](/assets/img/eclipse/jar_step_9.png)
 10. Add the JDA-JDA_VERSION_HERE-javadoc.jar and click OK.
-11. You're done!
+11. Continue with [Getting started](../usage/index.md)

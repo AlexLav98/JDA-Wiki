@@ -10,10 +10,10 @@ Please not that this is **not** the official wiki of JDA. You can find this one 
 
 !!! info "Version"
     Latest Dev build:  
-    ![dev builds]
+    ![dev builds][dev builds]
     
     Latest Release:  
-    ![github]
+    ![github][github]
 
 ## Pages
 

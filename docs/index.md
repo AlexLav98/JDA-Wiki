@@ -1,5 +1,6 @@
 [wiki]: https://github.com/DV8FromTheWorld/JDA/wiki
-[badge]: https://api.bintray.com/packages/dv8fromtheworld/maven/JDA/images/download.svg
+[dev builds]: https://img.shields.io/bintray/v/dv8fromtheworld/maven/JDA?label=Bintray
+[github]: https://img.shields.io/github/v/release/dv8fromtheworld/JDA?label=GitHub%20Release
 
 # Welcome to the JDA-Wiki
 Welcome to the JDA-Wiki.  
@@ -9,7 +10,10 @@ Please not that this is **not** the official wiki of JDA. You can find this one 
 
 !!! info "Version"
     Latest Dev build:  
-	![download][badge]
+    ![dev builds]
+    
+    Latest Release:  
+    ![github]
 
 ## Pages
 

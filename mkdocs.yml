@@ -5,7 +5,8 @@ site_author: 'Andre_601'
 docs_dir: docs/
 
 repo_name: 'Andre601/JDA-Wiki'
-repo_url: 'https://github.com/Andre601/JDA-Wiki'
+repo_url: 'https://github.com/DV8FromTheWorld/JDA/'
+edit_uri: 'https://github.com/Andre601/JDA-Wiki/edit/master/docs'
 
 nav:
   - Welcome: index.md
@@ -24,13 +25,16 @@ theme:
   palette:
     primary: 'deep purple'
     accent: 'deep purple'
-  feature:
-    tabs: true
+  features:
+  - tabs
 
 extra:
   social:
-    - type: 'github'
+    - icon: 'fontawesome/brands/github'
       link: 'https://github.com/DV8FromTheWorld/JDA'
+
+extra_css:
+- 'assets/css/dark.css'
 
 markdown_extensions:
   - admonition
@@ -40,3 +44,7 @@ markdown_extensions:
       permalink: true
   - pymdownx.superfences
   - pymdownx.details
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+      repo_url_shorthand: true
+      social_url_shorthand: true

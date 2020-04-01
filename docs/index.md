@@ -17,20 +17,20 @@ Please not that this is **not** the official wiki of JDA. You can find this one 
 
 ## Pages
 
-### [Setup](/setup/index.md)
-- [IntelliJ](setup/intellij.md)
-- [Eclipse](setup/eclipse.md)
-- [Netbeans](setup/netbeans.md)
+### [Setup](setup)
+- [IntelliJ](setup/intellij)
+- [Eclipse](setup/eclipse)
+- [Netbeans](setup/netbeans)
 
-### Using JDA
-- [Getting started](usage/index.md)
-- [RestActions](usage/restaction.md)
-    - [Asynchronous](usage/restaction.md#asynchronous)
-	- [Blocking (Synchronous)](usage/restaction.md#blocking)
-	- [Cancelable](usage/restaction.md#cancelable)
-	- [Planning](usage/restaction.md#xafter)
-- [GatewayIntents](usage/gatewayintents.md)
+### [Using JDA](usage)
+- [RestActions](usage/restaction)
+    - [Asynchronous](usage/restaction#asynchronous)
+	- [Blocking (Synchronous)](usage/restaction#blocking)
+	- [Cancelable](usage/restaction#cancelable)
+	- [Planning](usage/restaction#xafter)
+- [GatewayIntents](usage/gatewayintents)
 
 ## Copyright
-All depicted images are the property of their respective owners, unless mentioned otherwise.  
-I do not claim to have the copyright of the images depicted and only use them for the purpose of demonstration.
+All images shown where taken from the [original wiki][wiki] unless stated otherwise.  
+At no point do I claim to own the copyright of the depicted images.  
+The images are used for the purpose of explanation and demonstration and are therefore considered transformitive.

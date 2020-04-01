@@ -25,12 +25,25 @@ This page covers some parts you may want to know about Gateway Intents and some 
 Gateway Intents are implemented into JDA as their own enum called [GatewayIntent] and can be used when building/starting the bot.
 
 ### Enabling Intents
-You can use the [`JDABuilder#setEnabledIntents(GatewayIntent, GatewayIntent...)`][jdasetenabled] or [`DefaultShardManagerBuilder#sezEnabledIntents(GatewayIntent, GatewayIntent...)`][shardsetenabled] method to set the **enabled** Gateway Intents.  
+You can use the [`JDABuilder#setEnabledIntents(GatewayIntent, GatewayIntent...)`][jdasetenabled] or [`DefaultShardManagerBuilder#setEnabledIntents(GatewayIntent, GatewayIntent...)`][shardsetenabled] method to set the **enabled** Gateway Intents.  
 This will automatically disable all not set Intents.
 
 ### Disabling Intents
 If you only want to disable a selected few Intents can you use [`JDA#setDisabledIntents(GatewayIntent, GatewayIntent...)`][jdasetdisabled] or [`DefaultShardManagerBuilder#setDisabledIntents(GatewayIntent, GatewayIntent...)`][shardsetdisabled] to do so.  
 It is **required** to disable [Prvileged Intents](#privileged-intents) if you don't have them enabled in your developer-dashboard.
+
+### Using defaults
+Both the `JDABuilder` and the `DefaultShardManagerBuilder` offer a method called `createDefault(String)` which sets the token for the Bot and enables/disables specific Intents for the bot.  
+When using this will JDA set the following things (Might change in the future):
+
+- `setMemberCachePolicy(MemberCachePolicy)` is set to `MemberCachePolicy.DEFAULT`
+- `setChunkingFilter(ChunkingFilter)` is set to `ChunkingFilter.NONE`
+- `setEnabledIntents(Collection)` is set to `GatewayIntent.DEFAULT`
+- The CacheFlags `CacheFlag.ACTIVITY` and `CacheFlag.CLIENT_STATUS` will be **diabled**
+
+### Set based on used events
+The GatewayIntent enum of JDA has a method called `fromEvents(Class...)` which allows you to set intents based on what Events your bot is using.  
+The provided classes need to extend the GenericEvent class (i.e. through extending the ListenerAdabter) for this to work.
 
 ## Privileged Intents
 
@@ -38,7 +51,7 @@ It is **required** to disable [Prvileged Intents](#privileged-intents) if you do
     Bots that are on less than 100 Guilds won't require whitelisting.  
 	Bots which are on more than 100 Guilds and aren't whitelisted, only have access to 100 Guilds.
 	
-	**Those privileged intents are currently available for all Bots without requirement of whitelisting. This may change in the future**
+	**Those privileged intents are currently available for all Bots without requirement of whitelisting. This may change in the future (Date: 01. Apr 2020)**
 
 Discord has two Gateway Intents which are "privileged", meaning they require Discord to whitelist you, to access them.  
 Those intents are [GUILD_MEMBERS] (Receive information about members) and [GUILD_PRESENCES] (Receive information about precense updates).
@@ -47,24 +60,45 @@ Your bot **will break** when you try to access those without being whitelisted.
 
 You need to also set your ChunkingFilter to [`ChunkingFilter.NONE`][chunkingfilter] when GUILD_MEMBERS isn't used.
 
-## Changes to DefaultShardManagerBuilder
-The `DefaultShardManagerBuilder` received some major changes with the introduction of Gateway Intents.  
-The Constructors are now **deprecated** and it is recommendet to use [`DefaultShardManagerBuilder.create(String, GatewayIntent, GatewayIntent...`][create] instead.
+## Changes to JDABuilder and DefaultShardManagerBuilder
+The `JDABuilder` and `DefaultShardManagerBuilder` received some major changes with the introduction of Gateway Intents.  
+The Constructors themself (`JDABuilder(String)`/`DefaultShardManagerBuilder(String)`) are now **deprecated** and it is recommendet to use the `create(String, GatewayIntent, GatewayIntent...)` instead.
 
-```java
-// Old method
-public static void main(String[] args) throws LoginException{
-    new DefaultShardManagerBuilder(args[0]) // args[0] = token of bot
-	    .build();
-}
+??? note "Example JDABuilder"
+    ```java
+    // Old method
+    public static void main(String[] args) throws LoginException{
+	    // args[0] is the token of the bot.
+        new JDABuilder(args[0])
+	        .build();
+    }
+    
+    // New method
+    public static void main(String[] args) throws LoginException{
+	    // args[0] is the token of the bot.
+        JDABuilder
+		    .create(args[0], GatewayIntent.GUILD_MESSAGES, GUILD_MESSAGE_REACTIONS)
+		    .build();
+    }
+    ```
 
-// New method
-public static void main(String[] args) throws LoginException{
-    DefaultShardManagerBuilder
-	    .create(args[0], GatewayIntent.GUILD_MESSAGES, GUILD_MESSAGE_REACTIONS)
-		.build();
-}
-```
+??? note "Example DefaultShardManagerBuilder"
+    ```java
+    // Old method
+    public static void main(String[] args) throws LoginException{
+	    // args[0] is the token of the bot.
+        new DefaultShardManagerBuilder(args[0])
+	        .build();
+    }
+    
+    // New method
+    public static void main(String[] args) throws LoginException{
+	    // args[0] is the token of the bot.
+        DefaultShardManagerBuilder
+	        .create(args[0], GatewayIntent.GUILD_MESSAGES, GUILD_MESSAGE_REACTIONS)
+		    .build();
+    }
+    ```
 
 Note that you can also use [`DefaultShardManagerBuilder.createDefault(String)`][default] to setup default Gateway Intents and settings.
 

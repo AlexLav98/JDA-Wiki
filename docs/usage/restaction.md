@@ -27,6 +27,7 @@ Provides request future to cancel tasks later and avoid callback hell.
     We recommend using `queue()` or `submit()` when possible as blocking the current Thread could cause unwanted side-effects.
 
 Since JDA 4.1.1 can you use additional methods to prevent a so called "Callback hell" with `queue()`.
+
 - [`map`][map] Convert the result of the `RestAction` to a different value.
 - [`flatMap`][flatmap] Chain another `RestAction` on the result.
 - [`delay`][delay] Delay the element of the previous step.

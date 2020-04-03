@@ -801,10 +801,12 @@ Provides request future to cancel tasks later and avoid callback hell.</li>
 <p class="admonition-title">Note</p>
 <p>We recommend using <code>queue()</code> or <code>submit()</code> when possible as blocking the current Thread could cause unwanted side-effects.</p>
 </div>
-<p>Since JDA 4.1.1 can you use additional methods to prevent a so called "Callback hell" with <code>queue()</code>.
-- <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/requests/RestAction.html#map%28java.util.function.Function%29"><code>map</code></a> Convert the result of the <code>RestAction</code> to a different value.
-- <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/requests/RestAction.html#flatMap%28java.util.function.Function%29"><code>flatMap</code></a> Chain another <code>RestAction</code> on the result.
-- <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/requests/RestAction.html#delay%28java.time.Duration%29"><code>delay</code></a> Delay the element of the previous step.</p>
+<p>Since JDA 4.1.1 can you use additional methods to prevent a so called "Callback hell" with <code>queue()</code>.</p>
+<ul>
+<li><a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/requests/RestAction.html#map%28java.util.function.Function%29"><code>map</code></a> Convert the result of the <code>RestAction</code> to a different value.</li>
+<li><a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/requests/RestAction.html#flatMap%28java.util.function.Function%29"><code>flatMap</code></a> Chain another <code>RestAction</code> on the result.</li>
+<li><a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/requests/RestAction.html#delay%28java.time.Duration%29"><code>delay</code></a> Delay the element of the previous step.</li>
+</ul>
 <h2 id="auditlog-reasons">AuditLog Reasons<a class="headerlink" href="#auditlog-reasons" title="Permanent link">&para;</a></h2>
 <p>Some operations return a special <code>RestAction</code> implementation called <code>AuditableRestAction</code>.<br />
 This extension allows to set a reason field for that action.</p>

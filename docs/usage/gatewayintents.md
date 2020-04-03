@@ -77,7 +77,7 @@ The Constructors themself (`JDABuilder(String)`/`DefaultShardManagerBuilder(Stri
     public static void main(String[] args) throws LoginException{
 	    // args[0] is the token of the bot.
         JDABuilder
-		    .create(args[0], GatewayIntent.GUILD_MESSAGES, GUILD_MESSAGE_REACTIONS)
+		    .create(args[0], GatewayIntent.GUILD_MESSAGES, GatewayIntent.GUILD_MESSAGE_REACTIONS)
 		    .build();
     }
     ```
@@ -95,7 +95,7 @@ The Constructors themself (`JDABuilder(String)`/`DefaultShardManagerBuilder(Stri
     public static void main(String[] args) throws LoginException{
 	    // args[0] is the token of the bot.
         DefaultShardManagerBuilder
-	        .create(args[0], GatewayIntent.GUILD_MESSAGES, GUILD_MESSAGE_REACTIONS)
+	        .create(args[0], GatewayIntent.GUILD_MESSAGES, GatewayIntent.GUILD_MESSAGE_REACTIONS)
 		    .build();
     }
     ```

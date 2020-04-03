@@ -712,7 +712,7 @@ The Constructors themself (<code>JDABuilder(String)</code>/<code>DefaultShardMan
 <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">LoginException</span><span class="p">{</span>
     <span class="c1">// args[0] is the token of the bot.</span>
     <span class="n">JDABuilder</span>
-        <span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">GatewayIntent</span><span class="p">.</span><span class="na">GUILD_MESSAGES</span><span class="p">,</span> <span class="n">GUILD_MESSAGE_REACTIONS</span><span class="p">)</span>
+        <span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">GatewayIntent</span><span class="p">.</span><span class="na">GUILD_MESSAGES</span><span class="p">,</span> <span class="n">GatewayIntent</span><span class="p">.</span><span class="na">GUILD_MESSAGE_REACTIONS</span><span class="p">)</span>
         <span class="p">.</span><span class="na">build</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -729,7 +729,7 @@ The Constructors themself (<code>JDABuilder(String)</code>/<code>DefaultShardMan
 <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">LoginException</span><span class="p">{</span>
     <span class="c1">// args[0] is the token of the bot.</span>
     <span class="n">DefaultShardManagerBuilder</span>
-        <span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">GatewayIntent</span><span class="p">.</span><span class="na">GUILD_MESSAGES</span><span class="p">,</span> <span class="n">GUILD_MESSAGE_REACTIONS</span><span class="p">)</span>
+        <span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">GatewayIntent</span><span class="p">.</span><span class="na">GUILD_MESSAGES</span><span class="p">,</span> <span class="n">GatewayIntent</span><span class="p">.</span><span class="na">GUILD_MESSAGE_REACTIONS</span><span class="p">)</span>
         <span class="p">.</span><span class="na">build</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div>

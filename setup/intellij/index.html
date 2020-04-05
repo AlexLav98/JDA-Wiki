@@ -526,27 +526,27 @@ For setup with older versions see <a href="#older-intellij-version">here</a></p>
 </li>
 <li>Let IntelliJ index the project.</li>
 <li>Open the <code>build.gradle</code> file and populate it with the following content.<br />
-<div class="highlight"><pre><span></span><code>plugins {
-    id&#39;application&#39;
-    id&#39;com.github.johnrengelman.shadow&#39; version &#39;4.0.4&#39;
-}
+<div class="highlight"><pre><span></span><code><span class="n">plugins</span> <span class="o">{</span>
+    <span class="n">id</span><span class="s1">&#39;application&#39;</span>
+    <span class="n">id</span><span class="s1">&#39;com.github.johnrengelman.shadow&#39;</span> <span class="n">version</span> <span class="s1">&#39;4.0.4&#39;</span>
+<span class="o">}</span>
 
-mainClassName = &#39;com.example.jda.Bot&#39;
+<span class="n">mainClassName</span> <span class="o">=</span> <span class="s1">&#39;com.example.jda.Bot&#39;</span>
 
-version &#39;1.0&#39;
-def jdaVersion = &#39;JDA_VERSION_HERE&#39;
+<span class="n">version</span> <span class="s1">&#39;1.0&#39;</span>
+<span class="kt">def</span> <span class="n">jdaVersion</span> <span class="o">=</span> <span class="s1">&#39;JDA_VERSION_HERE&#39;</span>
 
-sourceCompatibility = targetCompatibility = 1.8
+<span class="n">sourceCompatibility</span> <span class="o">=</span> <span class="n">targetCompatibility</span> <span class="o">=</span> <span class="mf">1.8</span>
 
-repositories {
-    jcenter()
-}
+<span class="n">repositories</span> <span class="o">{</span>
+    <span class="n">jcenter</span><span class="o">()</span>
+<span class="o">}</span>
 
-dependencies {
-    compile &quot;net.dv8tion:JDA:$jdaVersion&quot;
-}
+<span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">compile</span> <span class="s2">&quot;net.dv8tion:JDA:$jdaVersion&quot;</span>
+<span class="o">}</span>
 
-compileJava.options.encoding = &#39;UTF-8&#39;
+<span class="n">compileJava</span><span class="o">.</span><span class="na">options</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="s1">&#39;UTF-8&#39;</span>
 </code></pre></div></li>
 <li>If IntelliJ didn't already do it, create a directory called <code>src/main/java</code></li>
 <li>Create the package of your bot. For example: <code>me.name.bot</code></li>

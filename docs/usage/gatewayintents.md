@@ -30,7 +30,8 @@ This will automatically disable all not set Intents.
 
 ### Disabling Intents
 If you only want to disable a selected few Intents can you use [`JDA#setDisabledIntents(GatewayIntent, GatewayIntent...)`][jdasetdisabled] or [`DefaultShardManagerBuilder#setDisabledIntents(GatewayIntent, GatewayIntent...)`][shardsetdisabled] to do so.  
-It is **required** to disable [Prvileged Intents](#privileged-intents) if you don't have them enabled in your developer-dashboard.
+It is **required** to disable [Prvileged Intents](#privileged-intents) if you don't have them enabled in your developer-dashboard.  
+This will automatically enable all not set Intents.
 
 ### Using defaults
 Both the `JDABuilder` and the `DefaultShardManagerBuilder` offer a method called `createDefault(String)` which sets the token for the Bot and enables/disables specific Intents for the bot.  

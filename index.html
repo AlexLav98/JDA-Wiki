@@ -54,7 +54,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -578,9 +578,9 @@ Please not that this is <strong>not</strong> the official wiki of JDA. You can f
 <li><a href="usage/gatewayintents">GatewayIntents</a></li>
 </ul>
 <h2 id="copyright">Copyright<a class="headerlink" href="#copyright" title="Permanent link">&para;</a></h2>
-<p>All images shown where taken from the <a href="https://github.com/DV8FromTheWorld/JDA/wiki">original wiki</a> unless stated otherwise.<br />
-At no point do I claim to own the copyright of the depicted images.<br />
-The images are used for the purpose of explanation and demonstration and are therefore considered transformitive.</p>
+<p>All text and images ("content") displayed on this page is the intellectual property of Austin Keener, Michael Ritter and Florian Spieß.<br />
+At no point do I (Andre601) claim to own the copyright of the depicted content.<br />
+The content is used for the purpose of explanation and demonstration.</p>
                 
               
               
@@ -593,39 +593,58 @@ The images are used for the purpose of explanation and demonstration and are the
         </div>
       </main>
       
-        
-<footer class="md-footer">
+  <!-- Link to previous and/or next page -->
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+      <nav class="md-footer-nav__inner md-grid">
+
+        <!-- Link to previous page -->
         
+
+        <!-- Link to next page -->
         
-          <a href="setup/" title="Setup" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
+          <a href="setup/"
+              title="Setup"
+              class="md-flex md-footer-nav__link md-footer-nav__link--next"
+              rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 Setup
-              </div>
+              </span>
             </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward
+                    md-footer-nav__button"></i>
             </div>
           </a>
         
       </nav>
     </div>
   
+
+  <!-- Further information -->
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
       <div class="md-footer-copyright">
-        
-        made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
+	    
+		  <div class="md-footer-copyright__highlight">
+            &copy; 2015-2020 Austin Keener, Michael Ritter, Florian Spieß
+<br>All text and images belong to aforementioned Copyright owners unless stated otherwise.
+
+	      </div>
+		
+		Built using <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>, 
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a> 
+        and <a href="https://facelessuser.github.io/pymdown-extensions/" target="_blank" rel="noopener">PyMdown Extensions</a>.
       </div>
+
+      <!-- Social links -->
       
   <div class="md-footer-social">
     
@@ -639,8 +658,7 @@ The images are used for the purpose of explanation and demonstration and are the
 
     </div>
   </div>
-</footer>
-      
+
     </div>
     
       <script src="assets/javascripts/vendor.23350dc5.min.js"></script>

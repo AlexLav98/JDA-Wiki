@@ -541,30 +541,30 @@ Otherwise, you need to install the <em>Buildship Gradle Integration plugin</em> 
 <li>Right-click within <em>Package/Project Explorer</em> and Select <code>New -&gt; Other...</code></li>
 <li>In the <em>Gradle</em> folder, select "Gradle Project".</li>
 <li>Write a name for your project and click on "Finish". Your setup should look similar to this:<br />
-<img alt="step 4" src="/assets/img/eclipse/gradle_step_4.png" /></li>
+<img alt="step 4" src="../../assets/img/eclipse/gradle_step_4.png" /></li>
 <li>Delete the classes located under <code>src/main/java</code> and <code>src/test/java</code></li>
 <li>Open the <code>build.gradle</code> and replace its content with the following code:<br />
-<div class="highlight"><pre><span></span><code>plugins {
-    id&#39;application&#39;
-    id&#39;com.github.johnrengelman.shadow&#39; version &#39;4.0.4&#39;
-}
+<div class="highlight"><pre><span></span><code><span class="n">plugins</span> <span class="o">{</span>
+    <span class="n">id</span><span class="s1">&#39;application&#39;</span>
+    <span class="n">id</span><span class="s1">&#39;com.github.johnrengelman.shadow&#39;</span> <span class="n">version</span> <span class="s1">&#39;4.0.4&#39;</span>
+<span class="o">}</span>
 
-mainClassName = &#39;com.example.jda.Bot&#39;
+<span class="n">mainClassName</span> <span class="o">=</span> <span class="s1">&#39;com.example.jda.Bot&#39;</span>
 
-version &#39;1.0&#39;
-def jdaVersion = &#39;JDA_VERSION_HERE&#39;
+<span class="n">version</span> <span class="s1">&#39;1.0&#39;</span>
+<span class="kt">def</span> <span class="n">jdaVersion</span> <span class="o">=</span> <span class="s1">&#39;JDA_VERSION_HERE&#39;</span>
 
-sourceCompatibility = targetCompatibility = 1.8
+<span class="n">sourceCompatibility</span> <span class="o">=</span> <span class="n">targetCompatibility</span> <span class="o">=</span> <span class="mf">1.8</span>
 
-repositories {
-    jcenter()
-}
+<span class="n">repositories</span> <span class="o">{</span>
+    <span class="n">jcenter</span><span class="o">()</span>
+<span class="o">}</span>
 
-dependencies {
-    compile &quot;net.dv8tion:JDA:$jdaVersion&quot;
-}
+<span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">compile</span> <span class="s2">&quot;net.dv8tion:JDA:$jdaVersion&quot;</span>
+<span class="o">}</span>
 
-compileJava.options.encoding = &#39;UTF-8&#39;
+<span class="n">compileJava</span><span class="o">.</span><span class="na">options</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="s1">&#39;UTF-8&#39;</span>
 </code></pre></div></li>
 <li>Create the package of your bot in <code>src/main/java</code>. For example: <code>me.name.bot</code></li>
 <li>Create your first Class. For example: <code>Bot.java</code></li>
@@ -659,20 +659,20 @@ compileJava.options.encoding = &#39;UTF-8&#39;
 </li>
 <li>Create a new Java Project.</li>
 <li>Fill out the Project name and set it to use Java 8 or higher.<br />
-<img alt="step 3" src="/assets/img/eclipse/jar_step_3.png" /></li>
+<img alt="step 3" src="../../assets/img/eclipse/jar_step_3.png" /></li>
 <li>Right-click the Project and select "Properties".</li>
 <li>Click on "Java Build Path", then click on the "Libraries" tab and finally on "Add External JARs..."<br />
-<img alt="step 5" src="/assets/img/eclipse/jar_step_5.png" /></li>
+<img alt="step 5" src="../../assets/img/eclipse/jar_step_5.png" /></li>
 <li>Add the downloaded JDA jarfile and expand its properties.<ul>
 <li>You can skip to step 11 if you don't want Javadoc and Source annotations (Not recommendet).<br />
-<img alt="step 6" src="/assets/img/eclipse/jar_step_6.png" /></li>
+<img alt="step 6" src="../../assets/img/eclipse/jar_step_6.png" /></li>
 </ul>
 </li>
 <li>Click on "Source Attachment" followed by "Edit..." and mark "External Locations". Finally click on "External File".<br />
-<img alt="step 7" src="/assets/img/eclipse/jar_step_7.png" /></li>
+<img alt="step 7" src="../../assets/img/eclipse/jar_step_7.png" /></li>
 <li>Add the JDA-JDA_VERSION_HERE-sources.jar and click OK.</li>
 <li>Click on "Javadoc Location", followed by "Edit..." and then mark "Javadoc in archive" before clicking on "Browse".<br />
-<img alt="step 9" src="/assets/img/eclipse/jar_step_9.png" /></li>
+<img alt="step 9" src="../../assets/img/eclipse/jar_step_9.png" /></li>
 <li>Add the JDA-JDA_VERSION_HERE-javadoc.jar and click OK.</li>
 <li>Continue with <a href="../../usage/">Getting started</a></li>
 </ol>

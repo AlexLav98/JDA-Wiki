@@ -29,10 +29,10 @@ You can download it [here][download].
 2. Right-click within *Package/Project Explorer* and Select `New -> Other...`
 3. In the *Gradle* folder, select "Gradle Project".
 4. Write a name for your project and click on "Finish". Your setup should look similar to this:  
-![step 4](/assets/img/eclipse/gradle_step_4.png)
+![step 4](../assets/img/eclipse/gradle_step_4.png)
 5. Delete the classes located under `src/main/java` and `src/test/java`
 6. Open the `build.gradle` and replace its content with the following code:  
-```gradle
+```groovy
 plugins {
     id'application'
     id'com.github.johnrengelman.shadow' version '4.0.4'
@@ -146,17 +146,17 @@ compileJava.options.encoding = 'UTF-8'
 	- [Jenkins builds]
 2. Create a new Java Project.
 3. Fill out the Project name and set it to use Java 8 or higher.  
-![step 3](/assets/img/eclipse/jar_step_3.png)
+![step 3](../assets/img/eclipse/jar_step_3.png)
 4. Right-click the Project and select "Properties".
 5. Click on "Java Build Path", then click on the "Libraries" tab and finally on "Add External JARs..."  
-![step 5](/assets/img/eclipse/jar_step_5.png)
+![step 5](../assets/img/eclipse/jar_step_5.png)
 6. Add the downloaded JDA jarfile and expand its properties.
     - You can skip to step 11 if you don't want Javadoc and Source annotations (Not recommendet).  
-![step 6](/assets/img/eclipse/jar_step_6.png)
+![step 6](../assets/img/eclipse/jar_step_6.png)
 7. Click on "Source Attachment" followed by "Edit..." and mark "External Locations". Finally click on "External File".  
-![step 7](/assets/img/eclipse/jar_step_7.png)
+![step 7](../assets/img/eclipse/jar_step_7.png)
 8. Add the JDA-JDA_VERSION_HERE-sources.jar and click OK.
 9. Click on "Javadoc Location", followed by "Edit..." and then mark "Javadoc in archive" before clicking on "Browse".  
-![step 9](/assets/img/eclipse/jar_step_9.png)
+![step 9](../assets/img/eclipse/jar_step_9.png)
 10. Add the JDA-JDA_VERSION_HERE-javadoc.jar and click OK.
 11. Continue with [Getting started](../usage/index.md)

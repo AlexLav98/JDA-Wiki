@@ -26,13 +26,13 @@ This requires you to at least have "Manage Server" permissions.
 8. Congratulations! Your bot should now be on the selected Discord.
 
 ## Connecting to Discord with the Bot account.
-1. On your application, click on the "Bot" tab on the left side.
-2. Under the "Token" section, click on the "Copy" button, to copy the token into your clipboard.  
-Do NOT click on "Regenerate" as this will recreate your token and invalidate the old one.
 
 !!! warning "Important"
     **Never** show the bot token to other people as they can take over control of your bot with it!
-
+	
+1. On your application, click on the "Bot" tab on the left side.
+2. Under the "Token" section, click on the "Copy" button, to copy the token into your clipboard.  
+Do NOT click on "Regenerate" as this will recreate your token and invalidate the old one.
 3. Setup a JDA project as described [here](../setup/index.md).
 4. Create a JDA instance using the `JDABuilder` and your bot token:  
 ```java

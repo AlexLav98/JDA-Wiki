@@ -13,9 +13,9 @@ Netbeans is a IDE for Java, JavaScript, HTML5, PHP, etc. development build by [N
 
 ## Setup Maven
 1. Create a new Maven Java Application.  
-![step 1](/assets/img/netbeans/maven_step_1.png)
+![step 1](../assets/img/netbeans/maven_step_1.png)
 2. Open the pom.xml in the Project Files.  
-![step 2](/assets/img/netbeans/maven_step_2.png)
+![step 2](../assets/img/netbeans/maven_step_2.png)
 3. Add jcenter as a repository and JDA as a dependency to maven.
 ```xml
 <repositories>
@@ -37,14 +37,14 @@ Netbeans is a IDE for Java, JavaScript, HTML5, PHP, etc. development build by [N
 
 ## Setup from Jar
 1. Download the latest (binary) version of JDA (with dependencies), as well as the Javadocs from the [CI server].  
-![step 1](/assets/img/netbeans/jar_step_1.png)
+![step 1](../assets/img/netbeans/jar_step_1.png)
 2. Make a new Java Application.  
-![step 2](/assets/img/netbeans/jar_step_2.png)
+![step 2](../assets/img/netbeans/jar_step_2.png)
 3. Right-click the "Libraries" folder in your project and select "Add JDA/Folder...".  
-![step 3](/assets/img/netbeans/jar_step_3.png)
+![step 3](../assets/img/netbeans/jar_step_3.png)
 4. Find the JDA-JDA_VERSION_HERE-with-dependencies.jar and add it.
 5. Right-click on the newly-added Jar file and select "Edit...".  
-![step 5](/assets/img/netbeans/jar_step_5.png)
+![step 5](../assets/img/netbeans/jar_step_5.png)
 6. Select "Browse..." next to the Javadoc section and add the JDA-JDA_VERSION_HERE-javadoc.jar  
-![step 6](/assets/img/netbeans/jar_step_6.png)
+![step 6](../assets/img/netbeans/jar_step_6.png)
 7. Cpmtronue with [Getting started](../usage/index.md)

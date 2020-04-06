@@ -31,6 +31,6 @@ Please not that this is **not** the official wiki of JDA. You can find this one 
 - [GatewayIntents](usage/gatewayintents)
 
 ## Copyright
-All images shown where taken from the [original wiki][wiki] unless stated otherwise.  
-At no point do I claim to own the copyright of the depicted images.  
-The images are used for the purpose of explanation and demonstration and are therefore considered transformitive.
+All text and images ("content") displayed on this page is the intellectual property of Austin Keener, Michael Ritter and Florian Spieß.  
+At no point do I (Andre601) claim to own the copyright of the depicted content.  
+The content is used for the purpose of explanation and demonstration.

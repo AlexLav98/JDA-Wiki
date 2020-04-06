@@ -9,15 +9,19 @@
 
 [Martin]: https://github.com/squidfunk
 
+[Isaac]: https://github.com/facelessuser
+
 # JDA-Wiki
 This is a (improved) wiki of JDA, based on the one found [here][wiki].  
 The live-version of **this** wiki can be found [here][site].
 
 ## Credit
 Credit goes to the following people:
-- [**Austin Keener**][Austin] (aka DV8FromTheWorld), [**Michael Ritter**][Michael] (aka Kantenkugel) and [**Florian Spieß**][Florian] (aka MinnDevelopment)  
+- [**Austin Keener**][Austin] (DV8FromTheWorld), [**Michael Ritter**][Michael] (Kantenkugel) and [**Florian Spieß**][Florian] (MinnDevelopment)  
 Contributors towards JDA and the official Wiki for it.
 - [**MkDocs**][MkDocs]  
 Provides the software used to generate the wiki-pages.
-- [**Martin Donath**][Martin] (aka squidfunk)  
+- [**Martin Donath**][Martin] (squidfunk)  
 Creator of the "Material" Theme used in this wiki.
+- [**Isaac Muse**][Isaac] (facelessuser)  
+Creator of the PyMdown-extensions used in this wiki.

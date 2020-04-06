@@ -172,7 +172,7 @@ Sends a delayed [`queue()`](#queue) action.
 Sends a delayed [`queue(Consumer<T>)`](#queueconsumer) action.
 
 ### `queueAfter(long, TimeUnit, Consumer, Consumer)`
-Sends a delayed [`queue(Consumer<T>, Consumer<Throwable>`](#queueconsumer-consumer) action.
+Sends a delayed [`queue(Consumer<T>, Consumer<Throwable>)`](#queueconsumer-consumer) action.
 
 ----
 

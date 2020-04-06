@@ -27,7 +27,7 @@ Gateway Intents are implemented into JDA as their own enum called [GatewayIntent
 
 ### Enabling Intents
 You can use the [`JDABuilder#setEnabledIntents(GatewayIntent, GatewayIntent...)`][jdasetenabled] or [`DefaultShardManagerBuilder#setEnabledIntents(GatewayIntent, GatewayIntent...)`][shardsetenabled] method to set the **enabled** Gateway Intents.  
-This will automatically disable all not set Intents.
+Note that this won't disable any other Intents, which aren't set.
 
 ### Disabling Intents
 If you only want to disable a selected few Intents can you use [`JDA#setDisabledIntents(GatewayIntent, GatewayIntent...)`][jdasetdisabled] or [`DefaultShardManagerBuilder#setDisabledIntents(GatewayIntent, GatewayIntent...)`][shardsetdisabled] to do so.  

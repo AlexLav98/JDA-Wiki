@@ -1,4 +1,3 @@
-[wiki]: https://github.com/DV8FromTheWorld/JDA/wiki
 [dev builds]: https://img.shields.io/bintray/v/dv8fromtheworld/maven/JDA?label=Bintray
 [github]: https://img.shields.io/github/v/release/dv8fromtheworld/JDA?label=GitHub%20Release
 

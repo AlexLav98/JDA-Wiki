@@ -12,7 +12,8 @@
 [chunkingfilter]: https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/utils/ChunkingFilter.html#NONE
 
 [create]: https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/sharding/DefaultShardManagerBuilder.html#create(java.lang.String,net.dv8tion.jda.api.requests.GatewayIntent,net.dv8tion.jda.api.requests.GatewayIntent...)
-[default]: https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/sharding/DefaultShardManagerBuilder.html#createDefault(java.lang.String)
+[default_shard]: https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/sharding/DefaultShardManagerBuilder.html#createDefault(java.lang.String)
+[default_jda]: https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/JDABuilder.html#createDefault(java.lang.String)
 
 # Gateway Intents
 Gateway Intents are Discord's way of giving the developers a option to choose, which information their bot needs and which they don't need.  
@@ -101,4 +102,4 @@ The Constructors themself (`JDABuilder(String)`/`DefaultShardManagerBuilder(Stri
     }
     ```
 
-Note that you can also use [`DefaultShardManagerBuilder.createDefault(String)`][default] to setup default Gateway Intents and settings.
+Note that you can also use [`JDABuilder.createDefault(String)`][default_jda] or [`DefaultShardManagerBuilder.createDefault(String)`][default_shard] to setup default Gateway Intents and settings.

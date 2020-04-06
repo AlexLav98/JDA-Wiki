@@ -102,21 +102,3 @@ The Constructors themself (`JDABuilder(String)`/`DefaultShardManagerBuilder(Stri
     ```
 
 Note that you can also use [`DefaultShardManagerBuilder.createDefault(String)`][default] to setup default Gateway Intents and settings.
-
-## Recommendet Intents
-Here is a list of recommendet Intents that should be set.
-
-### All bots
-For all bots is it recommendet to have `GUILD_MESSAGES` enabled, to receive messages on the Guilds (For command execution).  
-If your bot also allows commands to be used through DM, is `DIRECT_MESSAGES` required.
-
-### Music Bots
-`GUILD_VOICE_STATES` is required for tracking Voice state changes (i.e. Member joining/leaving a Voice chat), but also to **connect to the voice chat yourself**.  
-Bots without this intent cannot join voice chats.
-
-### Giveaway Bots
-If your Giveaway Bot is using Reactions for its Giveaways will it require the `GUILD_MESSAGE_REACTIONS` intent to listen for Reaction events (Adding/Removing reactions).
-
-### Moderation Bots
-Bots which perform Moderation tasks like kicking or banning Members should have the `GUILD_BANS` intent to keep track of kicks/bans performed by other moderators/bots.  
-Additionally if your bot also tracks invite creation/deletion as a moderation feature is `GUILD_INVITES` required.

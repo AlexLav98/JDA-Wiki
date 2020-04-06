@@ -30,18 +30,18 @@ You can use the [`JDABuilder#setEnabledIntents(GatewayIntent, GatewayIntent...)`
 Note that this won't disable any other Intents, which aren't set.
 
 ### Disabling Intents
-If you only want to disable a selected few Intents can you use [`JDA#setDisabledIntents(GatewayIntent, GatewayIntent...)`][jdasetdisabled] or [`DefaultShardManagerBuilder#setDisabledIntents(GatewayIntent, GatewayIntent...)`][shardsetdisabled] to do so.  
+If you only want to disable a selected few Intents you can use [`JDA#setDisabledIntents(GatewayIntent, GatewayIntent...)`][jdasetdisabled] or [`DefaultShardManagerBuilder#setDisabledIntents(GatewayIntent, GatewayIntent...)`][shardsetdisabled] to do so.  
 It is **required** to disable [Prvileged Intents](#privileged-intents) if you don't have them enabled in your developer-dashboard.  
 This will automatically enable all not set Intents.
 
 ### Using defaults
 Both the `JDABuilder` and the `DefaultShardManagerBuilder` offer a method called `createDefault(String)` which sets the token for the Bot and enables/disables specific Intents for the bot.  
-When using this will JDA set the following things (Might change in the future):
+When using this JDA will set the following things (Might change in the future):
 
 - `setMemberCachePolicy(MemberCachePolicy)` is set to `MemberCachePolicy.DEFAULT`
 - `setChunkingFilter(ChunkingFilter)` is set to `ChunkingFilter.NONE`
 - `setEnabledIntents(Collection)` is set to `GatewayIntent.DEFAULT`
-- The CacheFlags `CacheFlag.ACTIVITY` and `CacheFlag.CLIENT_STATUS` will be **diabled**
+- The CacheFlags `CacheFlag.ACTIVITY` and `CacheFlag.CLIENT_STATUS` will be **disabled**
 
 ### Set based on used events
 The GatewayIntent enum of JDA has a method called `fromEvents(Class...)` which allows you to set intents based on what Events your bot is using.  
@@ -55,8 +55,8 @@ The provided classes need to extend the GenericEvent class (i.e. through extendi
 	
 	**Those privileged intents are currently available for all Bots without requirement of whitelisting. This may change in the future (Date: 01. Apr 2020)**
 
-Discord has two Gateway Intents which are "privileged", meaning they require Discord to whitelist you, to access them.  
-Those intents are [GUILD_MEMBERS] (Receive information about members) and [GUILD_PRESENCES] (Receive information about precense updates).
+Discord has two Gateway Intents which are "privileged", meaning they require Discord to whitelist you to access them.  
+Those intents are [GUILD_MEMBERS] (Receive information about members) and [GUILD_PRESENCES] (Receive information about presence updates).
 
 Your bot **will break** when you try to access those without being whitelisted.  
 
@@ -64,7 +64,7 @@ You need to also set your ChunkingFilter to [`ChunkingFilter.NONE`][chunkingfilt
 
 ## Changes to JDABuilder and DefaultShardManagerBuilder
 The `JDABuilder` and `DefaultShardManagerBuilder` received some major changes with the introduction of Gateway Intents.  
-The Constructors themself (`JDABuilder(String)`/`DefaultShardManagerBuilder(String)`) are now **deprecated** and it is recommendet to use the `create(String, GatewayIntent, GatewayIntent...)` instead.
+The Constructors themselves (`JDABuilder(String)`/`DefaultShardManagerBuilder(String)`) are now **deprecated** and it's recommended to use the `create(String, GatewayIntent, GatewayIntent...)` method instead.
 
 ??? note "Example JDABuilder"
     ```java

@@ -468,47 +468,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#recommendet-intents" class="md-nav__link">
-    Recommendet Intents
-  </a>
-  
-    <nav class="md-nav" aria-label="Recommendet Intents">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#all-bots" class="md-nav__link">
-    All bots
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#music-bots" class="md-nav__link">
-    Music Bots
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#giveaway-bots" class="md-nav__link">
-    Giveaway Bots
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#moderation-bots" class="md-nav__link">
-    Moderation Bots
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -601,47 +560,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#recommendet-intents" class="md-nav__link">
-    Recommendet Intents
-  </a>
-  
-    <nav class="md-nav" aria-label="Recommendet Intents">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#all-bots" class="md-nav__link">
-    All bots
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#music-bots" class="md-nav__link">
-    Music Bots
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#giveaway-bots" class="md-nav__link">
-    Giveaway Bots
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#moderation-bots" class="md-nav__link">
-    Moderation Bots
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -674,7 +592,8 @@ This page covers some parts you may want to know about Gateway Intents and some 
 This will automatically disable all not set Intents.</p>
 <h3 id="disabling-intents">Disabling Intents<a class="headerlink" href="#disabling-intents" title="Permanent link">&para;</a></h3>
 <p>If you only want to disable a selected few Intents can you use <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/JDABuilder.html#setDisabledIntents(net.dv8tion.jda.api.requests.GatewayIntent,net.dv8tion.jda.api.requests.GatewayIntent...)"><code>JDA#setDisabledIntents(GatewayIntent, GatewayIntent...)</code></a> or <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/sharding/DefaultShardManagerBuilder.html#setDisabledIntents(net.dv8tion.jda.api.requests.GatewayIntent,net.dv8tion.jda.api.requests.GatewayIntent...)"><code>DefaultShardManagerBuilder#setDisabledIntents(GatewayIntent, GatewayIntent...)</code></a> to do so.<br />
-It is <strong>required</strong> to disable <a href="#privileged-intents">Prvileged Intents</a> if you don't have them enabled in your developer-dashboard.</p>
+It is <strong>required</strong> to disable <a href="#privileged-intents">Prvileged Intents</a> if you don't have them enabled in your developer-dashboard.<br />
+This will automatically enable all not set Intents.</p>
 <h3 id="using-defaults">Using defaults<a class="headerlink" href="#using-defaults" title="Permanent link">&para;</a></h3>
 <p>Both the <code>JDABuilder</code> and the <code>DefaultShardManagerBuilder</code> offer a method called <code>createDefault(String)</code> which sets the token for the Bot and enables/disables specific Intents for the bot.<br />
 When using this will JDA set the following things (Might change in the future):</p>
@@ -735,20 +654,7 @@ The Constructors themself (<code>JDABuilder(String)</code>/<code>DefaultShardMan
 </code></pre></div>
 
 </details>
-<p>Note that you can also use <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/sharding/DefaultShardManagerBuilder.html#createDefault(java.lang.String)"><code>DefaultShardManagerBuilder.createDefault(String)</code></a> to setup default Gateway Intents and settings.</p>
-<h2 id="recommendet-intents">Recommendet Intents<a class="headerlink" href="#recommendet-intents" title="Permanent link">&para;</a></h2>
-<p>Here is a list of recommendet Intents that should be set.</p>
-<h3 id="all-bots">All bots<a class="headerlink" href="#all-bots" title="Permanent link">&para;</a></h3>
-<p>For all bots is it recommendet to have <code>GUILD_MESSAGES</code> enabled, to receive messages on the Guilds (For command execution).<br />
-If your bot also allows commands to be used through DM, is <code>DIRECT_MESSAGES</code> required.</p>
-<h3 id="music-bots">Music Bots<a class="headerlink" href="#music-bots" title="Permanent link">&para;</a></h3>
-<p><code>GUILD_VOICE_STATES</code> is required for tracking Voice state changes (i.e. Member joining/leaving a Voice chat), but also to <strong>connect to the voice chat yourself</strong>.<br />
-Bots without this intent cannot join voice chats.</p>
-<h3 id="giveaway-bots">Giveaway Bots<a class="headerlink" href="#giveaway-bots" title="Permanent link">&para;</a></h3>
-<p>If your Giveaway Bot is using Reactions for its Giveaways will it require the <code>GUILD_MESSAGE_REACTIONS</code> intent to listen for Reaction events (Adding/Removing reactions).</p>
-<h3 id="moderation-bots">Moderation Bots<a class="headerlink" href="#moderation-bots" title="Permanent link">&para;</a></h3>
-<p>Bots which perform Moderation tasks like kicking or banning Members should have the <code>GUILD_BANS</code> intent to keep track of kicks/bans performed by other moderators/bots.<br />
-Additionally if your bot also tracks invite creation/deletion as a moderation feature is <code>GUILD_INVITES</code> required.</p>
+<p>Note that you can also use <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/JDABuilder.html#createDefault(java.lang.String)"><code>JDABuilder.createDefault(String)</code></a> or <a href="https://ci.dv8tion.net/job/JDA/javadoc/net/dv8tion/jda/api/sharding/DefaultShardManagerBuilder.html#createDefault(java.lang.String)"><code>DefaultShardManagerBuilder.createDefault(String)</code></a> to setup default Gateway Intents and settings.</p>
                 
               
               
